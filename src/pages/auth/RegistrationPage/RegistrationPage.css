@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1A1B1E;
+}
+
+.logo {
+    width: 9rem;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content {
+    width: 400px;
+    height: auto;
+}
+
+.header {
+    color: white;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+}
+
+.header h3 {
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1A1B1E;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1A1B1E;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px !important;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 2px !important;
+}
+
+.validation-message {
+    color: red;
+    margin-top: -30px !important;
+    margin-bottom: 8px;
+    text-align: start;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20px !important;
+}
+
+button {
+    width: 40%;
+    padding: 9px;
+    background-color: #F5618B;
+    color: white;
+    border: none;
+    border-radius: 25px !important;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: #ca5072;
+}
+
+.sign-in {
+    display: flex;
+    color: white;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+.sign-in>p {
+    padding: 0;
+    margin: 0;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: #F5618B;
+    font-weight: bold;
+}
+
+.validation-message {
+    color: #F5618B;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .main-container {
+        height: 100%;
+    }
+
+    .logo {
+        margin-top: 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .header h3 {
+        font-size: 1.25rem;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    input {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .icon {
+        left: 10px;
+    }
+
+    .eye-icon {
+        right: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .header {
+        width: 320px;
+    }
+
+    .header h3 {
+        font-size: 1rem;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .form-container {
+        width: 320px;
+    }
+
+    input {
+        font-size: 14px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+
+    .icon-svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .header {
+        width: 280px;
+    }
+
+    .header h3 {
+        font-size: 1rem;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .form-container {
+        width: 280px;
+    }
+
+    input {
+        font-size: 14px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+
+    .icon-svg {
+        width: 30px;
+        height: 30px;
+    }
+}
