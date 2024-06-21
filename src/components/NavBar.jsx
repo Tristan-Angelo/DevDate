@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './NavBar.css';
-import devdateLogo from '../assets/devdateLogo.png';
+import devDateLogo1 from '../assets/devDateLogo1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,7 +14,7 @@ const NavBar = () => {
           <box-icon name='menu' color='white'></box-icon>
         </label>
         <div className="navbar-logo">
-          <img src={devdateLogo} alt="Logo" />
+          <img src={devDateLogo1} alt="Logo" />
         </div>
         <div className="navbar-search">
           <div className="search-container">
