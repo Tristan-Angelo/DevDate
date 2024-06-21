@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'boxicons';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
 
