@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomePage.css";
+import { Link, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faEye } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +20,18 @@ import slide_img5 from "../../../assets/profiles/profile_5.jfif";
 import user from "../../../assets/user.png";
 
 const HomePage = () => {
+  const [followStatus, setFollowStatus] = useState(
+    [...Array(5)].map((_, index) => (index % 2 === 0 ? "Follow" : "Followed"))
+  );
+
+  const toggleFollow = (index) => {
+    setFollowStatus((prevStatus) =>
+      prevStatus.map((status, i) =>
+        i === index ? (status === "Follow" ? "Followed" : "Follow") : status
+      )
+    );
+  };
+
   return (
     <div className="homePage-main-container">
       <div className="container-fluid">
@@ -86,7 +99,9 @@ const HomePage = () => {
           <div className="right-pane">
             <div className="right-pane-header">
               <span>Suggested for you</span>
-              <span>See All</span>
+              <Link to="suggestedPage" className="see-all-link">
+                See all
+              </Link>
             </div>
             <div className="suggestions">
               {[...Array(5)].map((_, index) => (
@@ -97,11 +112,12 @@ const HomePage = () => {
                     <p>Follows you</p>
                   </div>
                   <button
-                    className={`follow-btn ${
-                      index % 2 === 0 ? "follow" : "followed"
-                    }`}
+                    className={`follow-btn ${followStatus[
+                      index
+                    ].toLowerCase()}`}
+                    onClick={() => toggleFollow(index)}
                   >
-                    {index % 2 === 0 ? "Follow" : "Followed"}
+                    {followStatus[index]}
                   </button>
                 </div>
               ))}

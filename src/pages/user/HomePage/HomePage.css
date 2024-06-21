@@ -234,8 +234,18 @@ body {
     color: #ffffff;
 }
 
-.right-pane-header span:first-child{
+.right-pane-header span:first-child {
     opacity: 70%;
+}
+
+.right-pane-header .see-all-link {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 100%;
+}
+
+.right-pane-header .see-all-link:hover {
+    text-decoration: underline;
 }
 
 .suggestions {
@@ -276,20 +286,15 @@ body {
     border-radius: 5px;
     color: white;
     font-size: 16px;
-    background-color: #F5618B;
+    background-color: #f5618b;
 }
 
 .follow-btn.followed {
-    margin-left: auto;
-    padding: 5px 10px;
-    width: 105px;
-    height: 27px;
-    border: 2px solid #F5618B;
-    border-radius: 5px;
-    color: #F5618B;
-    font-size: 16px;
+    border: 2px solid #f5618b;
+    color: #f5618b;
     background-color: transparent;
 }
+
 
 .footer {
     display: flex;
@@ -314,7 +319,7 @@ body {
     cursor: pointer;
 }
 
-.icon-buttons div:last-child  {
+.icon-buttons div:last-child {
     width: 50px;
     height: 50px;
     background-color: #F5618B;
