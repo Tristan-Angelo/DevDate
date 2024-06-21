@@ -8,22 +8,26 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const NavBar = () => {
   return (
     <div>
-      <div className="navbar">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label htmlFor="check" className="checkbtn">
+          <box-icon name='menu' color='white'></box-icon>
+        </label>
         <div className="navbar-logo">
           <img src={devdateLogo} alt="Logo" />
         </div>
         <div className="navbar-search">
-          <FontAwesomeIcon icon={faSearch} className="search-icon" />
-          <input type="text" placeholder="Search..." />
+          <div className="search-container">
+            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+            <input type="text" placeholder="Search..." className="search-input" />
+          </div>
         </div>
-        <nav className="navbar-links">
-          <ul>
-            <li><Link to="homePage"><box-icon name='heart' color='white'></box-icon></Link></li>
-            <li><Link to="messagesPage"><box-icon name='message-rounded-dots' color='white'></box-icon></Link></li>
-            <li><Link to="settingPage"><box-icon name='cog' color='white'></box-icon></Link></li>
-          </ul>
-        </nav>
-      </div>
+        <ul>
+          <li><Link to='homePage'><box-icon name='heart' color='white' size='28px'></box-icon></Link></li>
+          <li><Link to='messagesPage'><box-icon name='message-rounded-dots' color='white' size='28px'></box-icon></Link></li>
+          <li><Link to='settingPage'><box-icon name='cog' color='white' size='28px'></box-icon></Link></li>
+        </ul>
+      </nav>
       <Outlet />
     </div>
   );
