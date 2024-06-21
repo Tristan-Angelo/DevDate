@@ -48,17 +48,17 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div className='main-container'>
-      <img className='logo' src={devDateLogo} alt="DevDate Logo" />
-      <div className='content'>
-        <div className='header mb-2'>
+    <div className='register-main-container'>
+      <img className='register-logo' src={devDateLogo} alt="DevDate Logo" />
+      <div className='register-content'>
+        <div className='register-header mb-2'>
           <h3>Sign up</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div className="form-container">
+        <div className="register-form-container">
           <form onSubmit={handleSubmit}>
             <div className="input-group mb-4">
-              <FontAwesomeIcon icon={faUser} className="icon" />
+              <FontAwesomeIcon icon={faUser} className="register-icon" />
               <input
                 type="text"
                 name="name"
@@ -69,7 +69,7 @@ const RegistrationPage = () => {
               />
             </div>
             <div className="input-group mb-4">
-              <FontAwesomeIcon icon={faEnvelope} className="icon" />
+              <FontAwesomeIcon icon={faEnvelope} className="register-icon" />
               <input
                 type="email"
                 name="email"
@@ -80,7 +80,7 @@ const RegistrationPage = () => {
               />
             </div>
             <div className="input-group mb-4">
-              <FontAwesomeIcon icon={faLock} className="icon" />
+              <FontAwesomeIcon icon={faLock} className="register-icon" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 name="password"
@@ -92,7 +92,7 @@ const RegistrationPage = () => {
               />
               <FontAwesomeIcon
                 icon={showPassword ? faEyeSlash : faEye}
-                className="eye-icon"
+                className="register-eye-icon"
                 onClick={() => togglePasswordVisibility('password')}
               />
             </div>
@@ -102,7 +102,7 @@ const RegistrationPage = () => {
                 </div>
             )}
             <div className="input-group mb-4">
-              <FontAwesomeIcon icon={faLock} className="icon" />
+              <FontAwesomeIcon icon={faLock} className="register-icon" />
               <input
                 type={showConfirmPassword ? 'text' : 'password'}
                 name="confirmPassword"
@@ -114,7 +114,7 @@ const RegistrationPage = () => {
               />
               <FontAwesomeIcon
                 icon={showConfirmPassword ? faEyeSlash : faEye}
-                className="eye-icon"
+                className="register-eye-icon"
                 onClick={() => togglePasswordVisibility('confirmPassword')}
               />
             </div>
@@ -123,16 +123,16 @@ const RegistrationPage = () => {
                   {passwordError}
                 </div>
             )}
-            <div className='btn-container mb-4'>
+            <div className='register-btn-container mb-4'>
               <button type="submit">
                 <span>Submit</span>
-                <img src={loveArrow} alt="Submit Icon" className="icon-svg" />
+                <img src={loveArrow} alt="Submit Icon" className="register-icon-svg" />
               </button>
             </div>
           </form>
         </div>
-        <div className='sign-in'>
-          <p>Already have an account? <Link className="custom-link" to="/loginPage">Sign in</Link></p>
+        <div className='register-sign-in'>
+          <p>Already have an account? <Link className="register-custom-link" to="/loginPage">Sign in</Link></p>
         </div>
       </div>
     </div>

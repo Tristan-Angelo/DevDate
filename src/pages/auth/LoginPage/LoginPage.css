@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-.register-main-container {
+.login-main-container {
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -18,34 +18,34 @@
     background: #1A1B1E;
 }
 
-.register-logo {
-    width: 9rem;
+.login-logo {
+    width: 12rem;
     height: auto;
     margin-bottom: 20px;
 }
 
-.register-content {
+.login-content {
     width: 400px;
     height: auto;
 }
 
-.register-header {
+.login-header {
     color: white;
     font-family: "Inter", sans-serif;
     width: 100%;
 }
 
-.register-header h3 {
+.login-header h3 {
     font-weight: 700;
 }
 
-.register-header p {
+.login-header p {
     font-size: 15px;
     font-weight: 400;
     width: 100%;
 }
 
-.register-form-container {
+.login-form-container {
     text-align: center;
 }
 
@@ -54,7 +54,7 @@
     margin-bottom: 15px;
 }
 
-.register-icon {
+.login-icon {
     position: absolute;
     left: 14px;
     top: 50%;
@@ -62,7 +62,7 @@
     color: #1A1B1E;
 }
 
-.register-eye-icon {
+.login-eye-icon {
     position: absolute;
     right: 14px;
     top: 50%;
@@ -83,14 +83,7 @@ input {
     margin-bottom: 2px !important;
 }
 
-.validation-message {
-    color: red;
-    margin-top: -30px !important;
-    margin-bottom: 8px;
-    text-align: start;
-}
-
-.register-btn-container {
+.login-btn-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -112,7 +105,7 @@ button {
     justify-content: center;
 }
 
-.register-icon-svg {
+.login-icon-svg {
     width: 30px;
     height: 30px;
     margin-left: 5px;
@@ -123,7 +116,7 @@ button:hover {
     background-color: #ca5072;
 }
 
-.register-sign-in {
+.login-sign-up {
     display: flex;
     color: white;
     justify-content: center;
@@ -131,42 +124,32 @@ button:hover {
     padding: 0;
 }
 
-.register-sign-in>p {
+.login-sign-up > p {
     padding: 0;
     margin: 0;
 }
 
-.register-custom-link {
+.login-custom-link {
     text-decoration: none;
     color: #F5618B;
     font-weight: bold;
 }
 
-.validation-message {
-    color: #F5618B;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .register-main-container {
-        height: 100%;
-    }
-
-    .register-logo {
+    .login-logo {
         margin-top: 15px;
     }
 
-    .register-content {
+    .login-content {
         padding: 15px;
     }
 
-    .register-header h3 {
+    .login-header h3 {
         font-size: 1.25rem;
     }
 
-    .register-header p {
+    .login-header p {
         font-size: 13px;
     }
 
@@ -175,11 +158,11 @@ button:hover {
         padding-right: 35px;
     }
 
-    .register-icon {
+    .login-icon {
         left: 10px;
     }
 
-    .register-eye-icon {
+    .login-eye-icon {
         right: 10px;
     }
 
@@ -189,36 +172,39 @@ button:hover {
         font-size: 14px;
     }
 
-    .register-btn-container {
+    .login-btn-container {
         justify-content: center;
     }
 }
 
 @media (max-width: 375px) {
-    .register-content {
+    .login-main-container {
+        height: 105vh;
+    }
+    .login-content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
 
-    .register-logo {
+    .login-logo {
         margin-bottom: 10px;
     }
 
-    .register-header {
+    .login-header {
         width: 320px;
     }
 
-    .register-header h3 {
+    .login-header h3 {
         font-size: 1rem;
     }
 
-    .register-header p {
+    .login-header p {
         font-size: 12px;
     }
 
-    .register-form-container {
+    .login-form-container {
         width: 320px;
     }
 
@@ -232,42 +218,42 @@ button:hover {
         font-size: 13px;
     }
 
-    .register-icon-svg {
+    .login-icon-svg {
         width: 30px;
         height: 30px;
     }
 }
 
 @media (max-width: 320px) {
-    .register-main-container {
+    .login-main-container {
         width: 100%;
-        height: 100%;
+        height: 110vh;
     }
 
-    .register-content {
+    .login-content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
 
-    .register-logo {
+    .login-logo {
         margin-bottom: 10px;
     }
 
-    .register-header {
+    .login-header {
         width: 280px;
     }
 
-    .register-header h3 {
+    .login-header h3 {
         font-size: 1rem;
     }
 
-    .register-header p {
+    .login-header p {
         font-size: 12px;
     }
 
-    .register-form-container {
+    .login-form-container {
         width: 280px;
     }
 
@@ -281,7 +267,7 @@ button:hover {
         font-size: 13px;
     }
 
-    .register-icon-svg {
+    .login-icon-svg {
         width: 30px;
         height: 30px;
     }
