@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow } from "swiper/modules";
 
 import slide_img1 from "../../../assets/profiles/profile_1.jfif";
 import slide_img2 from "../../../assets/profiles/profile_2.jfif";
@@ -39,7 +39,7 @@ const HomePage = () => {
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
-              centeredSlides={true}
+              centeredSlides={false}
               loop={true}
               slidesPerView={"auto"}
               coverflowEffect={{
@@ -48,13 +48,7 @@ const HomePage = () => {
                 depth: 100,
                 modifier: 2.5,
               }}
-              pagination={{ el: ".swiper-pagination", clickable: true }}
-              navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                clickable: true,
-              }}
-              modules={[EffectCoverflow, Pagination, Navigation]}
+              modules={[EffectCoverflow]}
               className="swiper_container"
             >
               <SwiperSlide>
