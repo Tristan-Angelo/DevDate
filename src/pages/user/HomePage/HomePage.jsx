@@ -52,19 +52,99 @@ const HomePage = () => {
               className="swiper_container"
             >
               <SwiperSlide>
-                <img src={slide_img1} alt="slide_image" />
+                <div className="profile-card">
+                  <img
+                    src={slide_img1}
+                    alt="slide_image"
+                    className="profile-image"
+                  />
+                  <div className="profile-card-1">
+                    <div className="profile-info-1">
+                      <p>Hannah Masana</p>
+                      <p>sample@gmail.com</p>
+                    </div>
+                    <div className="profile-info-2">
+                      <p>0</p>
+                      <p>Followers</p>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_img2} alt="slide_image" />
+                <div className="profile-card">
+                  <img
+                    src={slide_img2}
+                    alt="slide_image"
+                    className="profile-image"
+                  />
+                  <div className="profile-card-1">
+                    <div className="profile-info-1">
+                      <p>Hannah Masana</p>
+                      <p>sample@gmail.com</p>
+                    </div>
+                    <div className="profile-info-2">
+                      <p>0</p>
+                      <p>Followers</p>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_img3} alt="slide_image" />
+                <div className="profile-card">
+                  <img
+                    src={slide_img3}
+                    alt="slide_image"
+                    className="profile-image"
+                  />
+                  <div className="profile-card-1">
+                    <div className="profile-info-1">
+                      <p>Hannah Masana</p>
+                      <p>sample@gmail.com</p>
+                    </div>
+                    <div className="profile-info-2">
+                      <p>0</p>
+                      <p>Followers</p>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_img4} alt="slide_image" />
+                <div className="profile-card">
+                  <img
+                    src={slide_img4}
+                    alt="slide_image"
+                    className="profile-image"
+                  />
+                  <div className="profile-card-1">
+                    <div className="profile-info-1">
+                      <p>Hannah Masana</p>
+                      <p>sample@gmail.com</p>
+                    </div>
+                    <div className="profile-info-2">
+                      <p>0</p>
+                      <p>Followers</p>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_img5} alt="slide_image" />
+                <div className="profile-card">
+                  <img
+                    src={slide_img5}
+                    alt="slide_image"
+                    className="profile-image"
+                  />
+                  <div className="profile-card-1">
+                    <div className="profile-info-1">
+                      <p>Hannah Masana</p>
+                      <p>sample@gmail.com</p>
+                    </div>
+                    <div className="profile-info-2">
+                      <p>0</p>
+                      <p>Followers</p>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
             </Swiper>
             <div className="footer-1">
