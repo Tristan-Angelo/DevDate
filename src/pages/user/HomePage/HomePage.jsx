@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "./HomePage.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faEye } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import slide_img1 from "../../../assets/profiles/profile_1.jfif";
@@ -21,7 +19,7 @@ import user from "../../../assets/user.png";
 
 const HomePage = () => {
   const [followStatus, setFollowStatus] = useState(
-    [...Array(5)].map((_, index) => (index % 2 === 0 ? "Follow" : "Followed"))
+    [...Array(10)].map((_, index) => (index % 2 === 0 ? "Follow" : "Followed"))
   );
 
   const toggleFollow = (index) => {
@@ -35,7 +33,7 @@ const HomePage = () => {
   return (
     <div className="homePage-main-container">
       <div className="container-fluid">
-        <div className="header">Try and Catch</div>
+        <div className="header-1">Try and Catch</div>
         <div className="main-content">
           <div className="left-pane">
             <Swiper
@@ -74,17 +72,8 @@ const HomePage = () => {
               <SwiperSlide>
                 <img src={slide_img5} alt="slide_image" />
               </SwiperSlide>
-              {/* <div className="slider-controler">
-                <div className="swiper-button-prev slider-arrow">
-                  <FontAwesomeIcon icon={faAngleLeft} className="arrow-icon" />
-                </div>
-                <div className="swiper-button-next slider-arrow">
-                  <FontAwesomeIcon icon={faAngleRight} className="arrow-icon" />
-                </div>
-                <div className="swiper-pagination"></div>
-              </div> */}
             </Swiper>
-            <div className="footer">
+            <div className="footer-1">
               <div className="icon-buttons">
                 <div>
                   <FontAwesomeIcon icon={faEye} className="icon-btn" />
@@ -93,8 +82,8 @@ const HomePage = () => {
                   <FontAwesomeIcon icon={faHeart} className="icon-btn" />
                 </div>
               </div>
+              <div className="extra-footer">Find Friends to Try and Catch</div>
             </div>
-            <div className="extra-footer">Find Friends to Try and Catch</div>
           </div>
           <div className="right-pane">
             <div className="right-pane-header">
@@ -104,7 +93,7 @@ const HomePage = () => {
               </Link>
             </div>
             <div className="suggestions">
-              {[...Array(5)].map((_, index) => (
+              {[...Array(10)].map((_, index) => (
                 <div className="suggestion-item" key={index}>
                   <img src={user} alt="Suggestion" />
                   <div>
