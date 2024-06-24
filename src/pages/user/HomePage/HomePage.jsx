@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./HomePage.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faEye } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -32,8 +32,8 @@ const HomePage = () => {
 
   return (
     <div className="homePage-main-container">
-      <div className="container-fluid">
-        <div className="header-1">Try and Catch</div>
+      <div className="content-container">
+        <h3>Try and Catch</h3>
         <div className="main-content">
           <div className="left-pane">
             <Swiper
@@ -162,7 +162,7 @@ const HomePage = () => {
           <div className="right-pane">
             <div className="right-pane-header">
               <span>Suggested for you</span>
-              <Link to="suggestedPage" className="see-all-link">
+              <Link to="" className="see-all-link">
                 See all
               </Link>
             </div>

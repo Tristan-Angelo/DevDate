@@ -1,17 +1,15 @@
-import './App.css'
-import {Routes, Route} from 'react-router-dom'
-import LandingPage from './pages/LandingPage/LandingPage'
-import LoginPage from './pages/auth/LoginPage/LoginPage'
-import RegistrationPage from './pages/auth/RegistrationPage/RegistrationPage'
-import NavBar from './components/NavBar'
-import HomePage from './pages/user/HomePage/HomePage'
-import MessagesPage from './pages/user/MessagesPage/MessagesPage'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import LoginPage from "./pages/auth/LoginPage/LoginPage";
+import RegistrationPage from "./pages/auth/RegistrationPage/RegistrationPage";
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/user/HomePage/HomePage";
+import MessagesPage from "./pages/user/MessagesPage/MessagesPage";
 
 function App() {
-
   return (
     <div>
-      
       {/* Routes */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -22,9 +20,8 @@ function App() {
           <Route path="messagesPage" element={<MessagesPage />} />
         </Route>
       </Routes>
-    
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
