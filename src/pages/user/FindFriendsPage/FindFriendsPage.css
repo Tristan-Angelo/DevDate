@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.find-main-container {
+    background: #1A1B1E;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    color: white;
+}
+
+.find-header {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    height: 7%;
+    margin-top: 22px;
+}
+
+.find-content {
+    width: 100%;
+    height: 92%;
+    padding: 0 3.7rem;
+    display: grid; /* Use CSS Grid */
+    gap: 15px; /* Gap between the cards */
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.find-cards {
+    width: 20rem;
+    height: 22rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3.7rem;
+    transition: 0.2s ease-in-out;
+}
+
+.find-cards img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.find-cards:hover {
+    transform: scale(1.05);
+}
+
+.find-icon-buttons {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 1.4rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.find-icon-buttons button {
+    padding: 6px 35px;
+    width: 100px;
+    border-radius: 30px;
+    transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
+}
+
+.find-eye-icon {
+    background: #2B2730;
+}
+
+.find-heart-icon {
+    border-radius: 30px;
+    padding: 1px 35px;
+    background: #F5618B;
+}
+
+@media screen and (max-width: 1024px) {
+    .find-content {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .find-cards {
+        height: 95%;
+        width: 93%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .find-content {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .find-cards {
+        height: 95%;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .find-cards {
+        height: 90%;
+        width: 80%;
+    }
+
+    .find-icon-buttons {
+        font-size: 1.2rem;
+    }
+
+    .find-icon-buttons button {
+        width: 35%;
+        padding: 6px 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .find-cards {
+        height: 90%;
+        width: 75%;
+    }
+
+    .find-icon-buttons {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .find-content {
+        width: 100%;
+        padding: 0 0;
+    }
+
+    .find-cards {
+        height: 90%;
+        width: 70%;
+    }
+}
+
+

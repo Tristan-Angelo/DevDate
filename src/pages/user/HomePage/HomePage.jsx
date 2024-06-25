@@ -162,7 +162,7 @@ const HomePage = () => {
           <div className="right-pane">
             <div className="right-pane-header">
               <span>Suggested for you</span>
-              <Link to="" className="see-all-link">
+              <Link to="/user/findFriendsPage" className="see-all-link">
                 See all
               </Link>
             </div>
