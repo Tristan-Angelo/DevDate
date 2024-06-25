@@ -6,6 +6,7 @@ import RegistrationPage from "./pages/auth/RegistrationPage/RegistrationPage";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/user/HomePage/HomePage";
 import MessagesPage from "./pages/user/MessagesPage/MessagesPage";
+import FindFriendsPage from "./pages/user/FindFriendsPage/FindFriendsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/user" element={<NavBar />}>
           <Route path="homePage" element={<HomePage />} />
           <Route path="messagesPage" element={<MessagesPage />} />
+          <Route path="findFriendsPage" element={<FindFriendsPage />} />
         </Route>
       </Routes>
     </div>
