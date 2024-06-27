@@ -26,6 +26,7 @@
     display: block;
     top: 0;
     z-index: 1;
+    animation: slideUp .7s ease-in-out;
 }
 
 .profile-info {
@@ -36,6 +37,7 @@
     margin-top: 4.5rem;
     height: 200vh;
     padding: 6rem 0 6rem 0;
+    animation: slideUp 1s ease-in-out;
 }
 
 .profile-details {
@@ -67,7 +69,8 @@
 }
 
 .profile-icon-buttons>button {
-    padding: 1px 0;
+    margin-top: 5px;
+    padding: 3px 0;
     width: 90px;
     border-radius: 30px;
     transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
@@ -76,6 +79,7 @@
     align-items: center;
     justify-content: center;
     color: #2B2730;
+    border: none;
 }
 
 .profile-other-social {
@@ -83,7 +87,7 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
-    margin-top: 12px;
+    margin-top: 20px;
     margin-bottom: 12px;
 }
 
@@ -253,6 +257,11 @@
     -o-object-position: 50% 50%;
     object-position: 50% 50%;
     animation: slideUp 0.9s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.ag-photo-gallery_img:hover {
+    transform: scale(1.05);
 }
 
 .ag-photo-gallery_item:nth-child(1) .ag-photo-gallery_img {
@@ -320,10 +329,39 @@
     z-index: 99999;
 }
 
+.prev-icon,
+.next-icon {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-icon {
+    left: 20px;
+}
+
+.next-icon {
+    right: 20px;
+}
+
 .full-screen-image {
     max-width: 100%;
     max-height: 100%;
 }
+
+.photo-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: white;
+    z-index: 1001;
+  }
 
 @keyframes fadeIn {
     from {
