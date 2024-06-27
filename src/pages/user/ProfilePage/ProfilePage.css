@@ -253,6 +253,11 @@
     -o-object-position: 50% 50%;
     object-position: 50% 50%;
     animation: slideUp 0.9s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.ag-photo-gallery_img:hover {
+    transform: scale(1.05);
 }
 
 .ag-photo-gallery_item:nth-child(1) .ag-photo-gallery_img {
