@@ -1,0 +1,426 @@
+.profile-main-container {
+    width: 100%;
+    height: 220vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1A1B1E;
+}
+
+.profile-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.profile-content>img {
+    border: 4px solid #F5618B;
+    width: 10rem;
+    border-radius: 50%;
+    display: block;
+    top: 0;
+    z-index: 1;
+}
+
+.profile-info {
+    position: absolute;
+    background: #2B2730;
+    border-radius: 15px;
+    width: 85%;
+    margin-top: 4.5rem;
+    height: 200vh;
+    padding: 6rem 0 6rem 0;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-details>h4 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.profile-details>.profile-role {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.profile-icon-buttons {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 1.3rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.profile-icon-buttons>button {
+    padding: 1px 0;
+    width: 90px;
+    border-radius: 30px;
+    transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2B2730;
+}
+
+.profile-other-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.profile-other-social>button {
+    border: none;
+    border-radius: 30px;
+    transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
+    background: transparent;
+    color: #F5618B;
+    font-size: 1.9rem;
+}
+
+.profile-bio {
+    color: white;
+    width: 60%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.profile-other-info {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.profile-other-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.profile-other-buttons>button {
+    border: none;
+    background-color: #ffffff1e;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    width: 5.5rem;
+    height: 5.9rem;
+    border-radius: 10px;
+}
+
+.profile-other-buttons>button>p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.profile-other-buttons>button.active {
+    background-color: #F5618B;
+    -webkit-box-shadow: 0px 0px 24px 0px #f5618bed;
+    -moz-box-shadow: 0px 0px 24px 0px #f5618bed;
+    box-shadow: 0px 0px 24px 0px #f5618bed;
+}
+
+.profile-hobbies-skills {
+    color: white;
+    margin-top: 2.5rem;
+    display: flex;
+}
+
+.profile-hobbies {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-hobbies>h4 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-hobbies>h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.profile-hobbies-lists {
+    width: 100%;
+}
+
+.profile-skills {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-skills>h4 {
+    position: relative;
+}
+
+.profile-skills>h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.profile-photos {
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 0px 5rem 0px 5rem;
+}
+
+.ag-format-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+    max-height: 100vh;
+}
+
+.ag-photo-gallery_list {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
+    -ms-grid-columns: 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr .9375rem 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ag-photo-gallery_item {
+    -ms-grid-column-span: 4;
+    grid-column-end: span 4;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.ag-photo-gallery_item__wide {
+    -ms-grid-column-span: 7;
+    grid-column-end: span 7;
+}
+
+.ag-photo-gallery_item__middle {
+    -ms-grid-column-span: 5;
+    grid-column-end: span 5;
+}
+
+.ag-photo-gallery_item__narrow {
+    -ms-grid-column-span: 3;
+    grid-column-end: span 3;
+}
+
+.ag-photo-gallery_figure {
+    width: 100%;
+    height: 100%;
+}
+
+.ag-photo-gallery_img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    animation: slideUp 0.9s ease-in-out;
+}
+
+.ag-photo-gallery_item:nth-child(1) .ag-photo-gallery_img {
+    animation-delay: 0.1s;
+}
+
+.ag-photo-gallery_item:nth-child(2) .ag-photo-gallery_img {
+    animation-delay: 0.2s;
+}
+
+.ag-photo-gallery_item:nth-child(3) .ag-photo-gallery_img {
+    animation-delay: 0.3s;
+}
+
+.ag-photo-gallery_item:nth-child(4) .ag-photo-gallery_img {
+    animation-delay: 0.4s;
+}
+
+.ag-photo-gallery_item:nth-child(5) .ag-photo-gallery_img {
+    animation-delay: 0.5s;
+}
+
+.ag-photo-gallery_item:nth-child(6) .ag-photo-gallery_img {
+    animation-delay: 0.6s;
+}
+
+.ag-photo-gallery_item:nth-child(7) .ag-photo-gallery_img {
+    animation-delay: 0.7s;
+}
+
+.ag-photo-gallery_item:nth-child(8) .ag-photo-gallery_img {
+    animation-delay: 0.8s;
+}
+
+.ag-photo-gallery_item:nth-child(9) .ag-photo-gallery_img {
+    animation-delay: 0.9s;
+}
+
+.full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.full-screen-image-container {
+    position: relative;
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+.close-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.full-screen-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ag-format-container {
+        max-height: 60vh;
+    }
+
+    .profile-photos {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .profile-other-social {
+        gap: 10px;
+    }
+
+    .ag-photo-gallery_list {
+        grid-gap: 10px;
+        -ms-grid-rows: 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .profile-photos {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .ag-format-container {
+        width: 90%;
+        max-height: 65vh;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+    .ag-format-container {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .profile-photos {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .ag-format-container {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .ag-photo-gallery_list {
+        grid-gap: 10px;
+        -ms-grid-rows: 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem .9375rem 14rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile-main-container {
+        height: 230vh;
+    }
+
+    .profile-info {
+        height: 205vh;
+    }
+
+    .ag-format-container {
+        width: 100%;
+        max-height: 30vh;
+    }
+}

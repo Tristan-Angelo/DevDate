@@ -98,7 +98,7 @@ input {
     margin-top: 20px !important;
 }
 
-button {
+.register-btn-container > button {
     width: 40%;
     padding: 9px;
     background-color: #F5618B;
@@ -119,7 +119,7 @@ button {
     vertical-align: middle;
 }
 
-button:hover {
+.register-btn-container > button:hover {
     background-color: #ca5072;
 }
 
@@ -128,10 +128,9 @@ button:hover {
     color: white;
     justify-content: center;
     width: 100%;
-    padding: 0;
 }
 
-.register-sign-in>p {
+.register-sign-in  >p {
     padding: 0;
     margin: 0;
 }
