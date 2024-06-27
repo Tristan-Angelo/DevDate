@@ -204,11 +204,11 @@
 
 .follow-btn {
     margin-left: auto;
-    padding: 5px 10px;
+    padding: 0 10px;
     width: 105px;
     height: 27px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     color: white;
     font-size: 16px;
     background-color: #f5618b;

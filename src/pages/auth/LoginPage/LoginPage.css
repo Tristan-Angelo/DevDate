@@ -91,7 +91,7 @@ input {
     margin-top: 20px !important;
 }
 
-button {
+.login-btn-container > button {
     width: 40%;
     padding: 9px;
     background-color: #F5618B;
@@ -112,7 +112,7 @@ button {
     vertical-align: middle;
 }
 
-button:hover {
+.login-btn-container > button:hover {
     background-color: #ca5072;
 }
 
