@@ -26,6 +26,7 @@
     display: block;
     top: 0;
     z-index: 1;
+    animation: slideUp .7s ease-in-out;
 }
 
 .profile-info {
@@ -36,6 +37,7 @@
     margin-top: 4.5rem;
     height: 200vh;
     padding: 6rem 0 6rem 0;
+    animation: slideUp 1s ease-in-out;
 }
 
 .profile-details {
