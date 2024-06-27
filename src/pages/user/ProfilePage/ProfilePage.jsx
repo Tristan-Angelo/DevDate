@@ -1,29 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProfilePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faHeart, faTimes } from "@fortawesome/free-solid-svg-icons";
-import slide_img4 from "../../../assets/profiles/profile_4.jfif";
-import slide_img1 from "../../../assets/profiles/profile_1.jfif";
-import slide_img2 from "../../../assets/profiles/profile_2.jfif";
-import slide_img3 from "../../../assets/profiles/profile_3.jfif";
-import slide_img5 from "../../../assets/profiles/profile_5.jfif";
+import { faHeart, faTimes, faChevronLeft, faChevronRight  } from "@fortawesome/free-solid-svg-icons";
+import slide_img4 from '../../../assets/profiles/profile_4.jfif';
+import slide_img1 from '../../../assets/profiles/profile_1.jfif';
+import slide_img2 from '../../../assets/profiles/profile_2.jfif';
+import slide_img3 from '../../../assets/profiles/profile_3.jfif';
+import slide_img5 from '../../../assets/profiles/profile_5.jfif';
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState('info');
   const [fullScreenImage, setFullScreenImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [slide_img1, slide_img2, slide_img3, slide_img5];
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
-  const handleImageClick = (imageSrc) => {
+  const handleImageClick = (imageSrc, index) => {
     setFullScreenImage(imageSrc);
+    setCurrentImageIndex(index);
+    document.body.classList.add('no-scroll');
   };
 
   const handleCloseFullScreen = () => {
     setFullScreenImage(null);
+    document.body.classList.remove('no-scroll');
   };
+
+  const handlePrevImage = () => {
+    const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+    setCurrentImageIndex(prevIndex);
+    setFullScreenImage(images[prevIndex]);
+  };
+
+  const handleNextImage = () => {
+    const nextIndex = (currentImageIndex + 1) % images.length;
+    setCurrentImageIndex(nextIndex);
+    setFullScreenImage(images[nextIndex]);
+  };
+
+  useEffect(() => {
+    // Cleanup on component unmount
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, []);
 
   return (
     <div className='profile-main-container'>
@@ -93,31 +118,31 @@ const ProfilePage = () => {
                     <div className="ag-photo-gallery_list">
                       <div className="ag-photo-gallery_item ag-photo-gallery_item__wide">
                         <figure className="ag-photo-gallery_figure">
-                            <img src={slide_img1} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img1)} />
+                            <img src={slide_img1} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img1, 0)} />
                         </figure>
                       </div>
 
                       <div className="ag-photo-gallery_item">
                         <figure className="ag-photo-gallery_figure">
-                            <img src={slide_img2} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img2)} />
+                            <img src={slide_img2} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img2, 1)} />
                         </figure>
                       </div>
 
                       <div className="ag-photo-gallery_item ag-photo-gallery_item__narrow">
                         <figure className="ag-photo-gallery_figure">
-                            <img src={slide_img3} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img3)} />
+                            <img src={slide_img3} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img3, 2)} />
                         </figure>
                       </div>
 
                       <div className="ag-photo-gallery_item ag-photo-gallery_item__middle">
                         <figure className="ag-photo-gallery_figure">
-                            <img src={slide_img5} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img5)} />
+                            <img src={slide_img5} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img5, 3)} />
                         </figure>
                       </div>
 
                       <div className="ag-photo-gallery_item ag-photo-gallery_item__narrow">
                         <figure className="ag-photo-gallery_figure">
-                            <img src={slide_img1} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img1)} />
+                            <img src={slide_img1} className="ag-photo-gallery_img" alt="" onClick={() => handleImageClick(slide_img1, 0)} />
                         </figure>
                       </div>
                     </div>
@@ -130,10 +155,13 @@ const ProfilePage = () => {
       </div>
       {fullScreenImage && (
         <div className="full-screen-overlay">
+          <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={handleCloseFullScreen} />
+          <FontAwesomeIcon icon={faChevronLeft} className="prev-icon" onClick={handlePrevImage} />
+          <FontAwesomeIcon icon={faChevronRight} className="next-icon" onClick={handleNextImage} />
           <div className="full-screen-image-container">
             <img src={fullScreenImage} alt="Full Screen" className="full-screen-image" />
-            <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={handleCloseFullScreen} />
           </div>
+          <div className="photo-counter">{currentImageIndex + 1}/{images.length}</div>
         </div>
       )}
     </div>

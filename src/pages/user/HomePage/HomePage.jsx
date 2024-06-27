@@ -12,8 +12,8 @@ import { EffectCoverflow } from "swiper/modules";
 
 import slide_img1 from "../../../assets/profiles/profile_1.jfif";
 import slide_img2 from "../../../assets/profiles/profile_2.jfif";
-import slide_img3 from "../../../assets/profiles/profile_3.jfif";
-import slide_img4 from "../../../assets/profiles/profile_4.jfif";
+import slide_img4 from "../../../assets/profiles/profile_3.jfif";
+import slide_img3 from "../../../assets/profiles/profile_4.jfif";
 import slide_img5 from "../../../assets/profiles/profile_5.jfif";
 import user from "../../../assets/user.png";
 
@@ -150,7 +150,9 @@ const HomePage = () => {
             <div className="footer-1">
               <div className="icon-buttons">
                 <div>
-                  <FontAwesomeIcon icon={faEye} className="icon-btn" />
+                  <Link to='/user/profilePage'>
+                    <FontAwesomeIcon icon={faEye} className="icon-btn" />
+                  </Link>
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faHeart} className="icon-btn" />

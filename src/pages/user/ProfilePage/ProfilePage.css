@@ -69,7 +69,8 @@
 }
 
 .profile-icon-buttons>button {
-    padding: 1px 0;
+    margin-top: 5px;
+    padding: 3px 0;
     width: 90px;
     border-radius: 30px;
     transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
@@ -78,6 +79,7 @@
     align-items: center;
     justify-content: center;
     color: #2B2730;
+    border: none;
 }
 
 .profile-other-social {
@@ -85,7 +87,7 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
-    margin-top: 12px;
+    margin-top: 20px;
     margin-bottom: 12px;
 }
 
@@ -327,10 +329,39 @@
     z-index: 99999;
 }
 
+.prev-icon,
+.next-icon {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-icon {
+    left: 20px;
+}
+
+.next-icon {
+    right: 20px;
+}
+
 .full-screen-image {
     max-width: 100%;
     max-height: 100%;
 }
+
+.photo-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: white;
+    z-index: 1001;
+  }
 
 @keyframes fadeIn {
     from {
