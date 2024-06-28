@@ -150,7 +150,7 @@ const HomePage = () => {
             <div className="footer-1">
               <div className="icon-buttons">
                 <div>
-                  <Link to='/user/profilePage'>
+                  <Link to="/user/profilePage">
                     <FontAwesomeIcon icon={faEye} className="icon-btn" />
                   </Link>
                 </div>

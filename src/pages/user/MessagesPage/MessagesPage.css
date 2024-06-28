@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 22px;
+    color: #fff;
+}
+
+.sidebar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-heading :last-child {
+    background-color: #fff;
+    color: #141414;
+    border-radius: 100%;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.app-container {
+    display: flex;
+    height: calc(100vh - 75px);
+    background-color: #1A1B1E;
+}
+
+.sidebar {
+    width: 390px;
+    background-color: #2b2b2b;
+    padding: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+}
+
+.followers-list {
+    display: flex;
+    flex-direction: column;
+    height: 71.5%;
+    overflow: auto;
+}
+
+.follower {
+    display: flex;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.follower-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.follower-info img {
+    width: 56px;
+    height: 56px;
+}
+
+.follower-info div p:first-child {
+    font-size: 20px;
+}
+
+.follower-info div p:last-child {
+    font-size: 16px;
+    margin-top: -15px;
+}
+
+.follower-info div p:last-child span {
+    opacity: 70%;
+    margin-left: 10px;
+}
+
+.follower-info div p:last-child span .icon {
+    width: 6px;
+    margin-right: 5px;
+}
+
+.follower .icon-btn {
+    width: 15px;
+    color: #F5618B;
+}
+
+.follower.active {
+    background-color: #f5618bd3;
+}
+
+.load-more {
+    padding: 8px;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5618B;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.load-more .load-icon {
+    width: 16px;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #F5618B;
+}
+
+.chat-header img {
+    width: 46px;
+    margin-right: 10px;
+}
+
+.chat-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.info-icon {
+    background: #fff;
+    border-radius: 100%;
+    border: none;
+    color: #F5618B;
+    cursor: pointer;
+    width: 25px;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.chat-box div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+}
+
+.chat-box button {
+    background-color: transparent;
+    border: none;
+}
+
+.chat-box .send-icon {
+    height: 30px;
+    color: #F5618B;
+}
+
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+}
+
+.profile-settings {
+    width: 250px;
+    background-color: #141414;
+    border-left: 1px solid #ffffff38;
+    padding: 20px;
+}
+
+.profile-picture {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.profile-picture img {
+    width: 80px;
+}
+
+.profile-options {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-option {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    background-color: #F5618B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.profile-icon {
+    font-size: 25px;
+}
